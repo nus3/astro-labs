@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import "../style.css"
+import "../style.css";
 ---
 
 <html lang="en">
@@ -25,42 +25,35 @@ import "../style.css"
     <main class="main" transition:animate="slide">
       <slot />
     </main>
+
+    <style scoped>
+      .body {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        padding: 0 1rem;
+        background-color: var(--bg-light-color);
+      }
+      .main {
+        padding: 2rem;
+      }
+      .title {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .menu-item {
+        margin: 0;
+      }
+    </style>
   </body>
 </html>
-
-<style scoped>
-.body {
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  padding: 0 1rem;
-  background-color: var(--bg-light-color);
-}
-
-.main {
-  padding: 2rem;
-}
-
-.title {
-  margin: 0;
-  font-size: 1.6rem;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.menu-item {
-  margin: 0;
-}
-</style>
-
-

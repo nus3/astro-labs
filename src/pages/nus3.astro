@@ -4,10 +4,20 @@ import "../style.css";
 ---
 
 <Layout>
-  <div class="section">nus3 Content</div>
+  <div class="wrapper">
+    <div class="section">nus3 Content</div>
+    <div class="section target" transition:name="target">nus3 Content</div>
+    <div class="section">nus3 Content</div>
+    <div class="section">nus3 Content</div>
+  </div>
 </Layout>
 
 <style scoped>
+  .wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
   .section {
     box-sizing: border-box;
     padding: 1rem;
@@ -15,5 +25,9 @@ import "../style.css";
     width: 200px;
     height: 200px;
     background-color: var(--primary-color-opacity-low);
+  }
+
+  .target {
+    border: 1px solid var(--primary-color);
   }
 </style>
